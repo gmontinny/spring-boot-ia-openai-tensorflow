@@ -1,0 +1,62 @@
+### Processar mensagem de chat
+POST http://localhost:8080/api/chat/process
+Content-Type: application/json
+
+{
+  "message": "Estou muito satisfeito com este produto, superou minhas expectativas!"
+}
+
+### Obter histórico de chat
+GET http://localhost:8080/api/chat/history
+
+### Obter mensagens positivas
+GET http://localhost:8080/api/chat/sentiment/POSITIVE
+
+### Criar produto com descrição gerada
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Fone Bluetooth Premium",
+  "description": "Fone sem fio",
+  "price": 299.99,
+  "category": "Áudio"
+}
+
+### Listar todos os produtos
+GET http://localhost:8080/api/products
+
+### Resumir texto
+POST http://localhost:8080/api/ai/summarize
+Content-Type: application/json
+
+{
+  "text": "A inteligência artificial está revolucionando diversos setores da economia. Desde a automação de processos até a análise preditiva, as empresas estão adotando soluções de IA para melhorar a eficiência e reduzir custos. O machine learning permite que sistemas aprendam com dados históricos e façam previsões precisas sobre tendências futuras."
+}
+
+### Traduzir texto
+POST http://localhost:8080/api/ai/translate
+Content-Type: application/json
+
+{
+  "text": "Hello, how are you today?",
+  "targetLanguage": "português"
+}
+
+### Gerar código
+POST http://localhost:8080/api/ai/generate-code
+Content-Type: application/json
+
+{
+  "description": "Função recursiva para calcular o fatorial de um número",
+  "language": "Java"
+}
+
+### Busca semântica
+POST http://localhost:8080/api/search/semantic
+Content-Type: application/json
+
+{
+  "query": "produto com defeito",
+  "topK": "3"
+}

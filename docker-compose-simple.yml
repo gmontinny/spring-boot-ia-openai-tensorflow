@@ -1,0 +1,8 @@
+# Versão simplificada sem Milvus para desenvolvimento
+version: '3.8'
+
+services:
+  # Apenas para referência - aplicação funciona sem Milvus
+  placeholder:
+    image: hello-world
+    container_name: placeholder-service
